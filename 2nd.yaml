@@ -40,8 +40,7 @@ ec2-instance:
       - NetworkInterface
     PlacementGroupName: String
     PrivateIpAddress: String
-    RamdiskId: String
-    SecurityGroupIds: 
+  
       - String
     SecurityGroups: 
       - String
