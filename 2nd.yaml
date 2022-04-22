@@ -53,4 +53,3 @@ ec2-instance:
     Tenancy: String
     UserData: String
     Volumes: 
-      - Volume
