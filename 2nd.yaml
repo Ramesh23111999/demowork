@@ -52,4 +52,4 @@ ec2-instance:
       - Tag
     Tenancy: String
     UserData: String
-    Volumes: 
+    
