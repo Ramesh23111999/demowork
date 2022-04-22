@@ -41,7 +41,7 @@ ec2-instance:
     PlacementGroupName: String
     PrivateIpAddress: String
   
-      - String
+
     SecurityGroups: 
       - String
     SourceDestCheck: Boolean
