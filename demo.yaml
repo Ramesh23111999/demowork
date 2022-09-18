@@ -1,0 +1,28 @@
+---
+Resources:
+  Ec2Instance:
+    Type: AWS::EC2::Instance
+    Properties: 
+      Type: t2.micro
+      ImageId: !FindInMap 
+                - !Ref  Region 
+                - paramName:
+                  Description: 
+                  Type: AWS::EC2::Image::Id
+                  Default: 
+      AvailabiltyZone: ap-south-1
+      KeyName: new
+      Security: !Ref SecurityGroup
+    SecurityGroup:
+      Type: AWS::EC2::SecurityGroup
+      Properties:
+        GroupDescription: Enable ssh Accesss via port 22
+        VpcId: vpc-id
+        SecurityGroupIngress:
+          - IpProtocol: tcp
+            FromPort: 22
+            ToPort: 22
+            CidrIp: 0.0.0.0/0
+        Tags:
+          - Key: Name
+            Value: SecurityGroup  
